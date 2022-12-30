@@ -1,4 +1,0 @@
-|/EGamma/Run2018B-17Sep2018-v1_PRIVATE/NANOAOD|/hadoop/cms/store/user/hmei/nanoaod_runII/HHggtautau//EGamma_Run2018B-17Sep2018-v1_MINIAOD_v0.6_20201021/|153822427|7.1|102X_dataRun2_v13|v7| |
-|/EGamma/Run2018C-17Sep2018-v1_PRIVATE/NANOAOD|/hadoop/cms/store/user/hmei/nanoaod_runII/HHggtautau//EGamma_Run2018C-17Sep2018-v1_MINIAOD_v0.6_20201021/|147827904|6.9|102X_dataRun2_v13|v7| |
-|/EGamma/Run2018D-22Jan2019-v2_PRIVATE/NANOAOD|/hadoop/cms/store/user/hmei/nanoaod_runII/HHggtautau//EGamma_Run2018D-22Jan2019-v2_MINIAOD_v0.6_20201021/|754798781|31.93|102X_dataRun2_v13|v7| |
-|/EGamma/Run2018A-17Sep2018-v2_PRIVATE/NANOAOD|/hadoop/cms/store/user/hmei/nanoaod_runII/HHggtautau//EGamma_Run2018A-17Sep2018-v2_MINIAOD_v0.6_20201021/|327843843|14.0|102X_dataRun2_v13|v7| |
