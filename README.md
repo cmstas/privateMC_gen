@@ -36,6 +36,8 @@ python mini2nanoAOD_XtoYH.py --tag <tag>
 
 The command above prepares and submits condor jobs for the samples included in the `dsdefs_miniaod_UL_XtoYH.py` file. The local files in there can be skipped with the `--skip_local` option and the central files can be skipped with the `--skip_central` option. Further selection can be achieved with the `--filter` (for years/eras/data/MC) and the `--dsfilter` (for dataset names).
 
+Accessing files remotely often gives I/O issues that make the jobs crash. In case this happens, the `--localcp` option can be used, which copies the input files locally to the condor node and runs on them, instead of running on them remotely.
+
 For the submission to condor, a tar package is prepared. To skip the packaging, the `--soft_rerun` can be used.
 
 ### Private MC production

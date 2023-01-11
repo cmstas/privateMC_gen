@@ -16,6 +16,7 @@ parser.add_argument("--dsfilter", help = "only process mc/data with some name pa
 parser.add_argument("--soft_rerun", help = "don't remake tarball", action="store_true")
 parser.add_argument("--skip_local", help = "don't submit jobs for local samples", action = "store_true")
 parser.add_argument("--skip_central", help = "don't submit jobs for central samples", action = "store_true")
+parser.add_argument("--localcp", help = "first copy the file, then run on it, rather than remote accessing it", action = "store_true")
 args = parser.parse_args()
 
 user = os.environ.get("USER")
@@ -34,8 +35,6 @@ merged_dir = "/ceph/cms/store/user/{}/{}/".format(user,ceph_path)
 
 cmssw_ver = "CMSSW_10_6_27"
 
-DOSKIM = False 
-
 exec_path = "condor_exe_XtoYH.sh"
 
 if not args.soft_rerun:
@@ -46,8 +45,8 @@ if not args.soft_rerun:
 total_summary = {}
 dsdefs = dsdefs_data + dsdefs_signal + dsdefs_bkg
 # Loop through samples
-for ds,loc,fpo,args in dsdefs[:]:
-  if (job_filter != "") and (args not in job_filter) : continue
+for ds,loc,fpo,arguments in dsdefs[:]:
+  if (job_filter != "") and (arguments not in job_filter) : continue
   if (ds_filter != "") and (ds_filter not in ds) : continue
 
   if loc != None:
@@ -56,7 +55,7 @@ for ds,loc,fpo,args in dsdefs[:]:
   else:
     if skip_central: continue
     sample = DBSSample( dataset=ds )
-  print(ds, args)
+  print(ds, arguments)
 
   task = CondorTask(
     sample = sample,
@@ -71,7 +70,7 @@ for ds,loc,fpo,args in dsdefs[:]:
     condor_submit_params = {"sites": "T2_US_UCSD,T2_US_CALTECH,T2_US_WISCONSIN,T2_US_Florida", # other_sites can be good_sites, your own list, etc.
         "classads": [["SingularityImage","/cvmfs/singularity.opensciencegrid.org/cmssw/cms:rhel7-m202006"]]},
     special_dir = ceph_path,
-    arguments = args.replace(" ","|")
+    arguments = arguments.replace(" ","|")+("|LOCAL" if args.localcp else "")
   )
 
   if not task.complete():

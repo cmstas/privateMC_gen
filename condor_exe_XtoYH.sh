@@ -87,13 +87,54 @@ else
     echo "Don't know which cmssw cfg to use, check ARGS!!"
 fi
 
+
 # update input file
+if [[ $ARGS == *"LOCAL"* ]]
+then
+
+COMCOPY=$(python <<EOF
+list="${INPUTFILENAMES}"
+string=""
+for file in list.split(","):
+  if not file.startswith("/store"): continue
+  xrootdfile=file.replace("/store","root://cmsxrootd.fnal.gov//store")
+  string=string+xrootdfile+" "
+print("xrdcp -f "+string+" .")
+EOF
+)
+eval ${COMCOPY}
+
+COMLIST=$(python <<EOF
+list="${INPUTFILENAMES}"
+newlist=""
+for file in list.split(","):
+  if not file.startswith("/store"): continue
+  localfile="file:"+file.split("/")[-1]
+  newlist=newlist+localfile+","
+newlist=newlist.strip(",")
+print(newlist)
+EOF
+)
+LOCALINPUTFILENAMES=$(echo ${COMLIST})
+
+echo "process.source = cms.Source(\"PoolSource\",
+fileNames=cms.untracked.vstring(\"${LOCALINPUTFILENAMES}\".split(\",\"))
+)
+
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32( -1 ) )
+" >> $cmssw_cfg 
+
+else
+
 echo "process.source = cms.Source(\"PoolSource\",
 fileNames=cms.untracked.vstring(\"${INPUTFILENAMES}\".replace('/ceph', 'file:/ceph').split(\",\"))
 )
 
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32( -1 ) )
 " >> $cmssw_cfg 
+
+fi
+
 
 # Create tag file
 echo "[wrapper `date +\"%Y%m%d %k:%M:%S\"`] running: cmsRun "${cmssw_cfg}
