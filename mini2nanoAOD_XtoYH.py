@@ -67,7 +67,7 @@ for ds,loc,fpo,arguments in dsdefs[:]:
     scram_arch = "slc7_amd64_gcc700",
     executable = exec_path,
     tarfile = "package.tar.gz",
-    condor_submit_params = {"sites": "T2_US_UCSD,T2_US_CALTECH,T2_US_WISCONSIN,T2_US_Florida", # other_sites can be good_sites, your own list, etc.
+    condor_submit_params = {"sites": "T2_US_MIT,T2_US_UCSD,T2_US_CALTECH,T2_US_WISCONSIN,T2_US_Florida", # other_sites can be good_sites, your own list, etc.
         "classads": [["SingularityImage","/cvmfs/singularity.opensciencegrid.org/cmssw/cms:rhel7-m202006"]]},
     special_dir = ceph_path,
     arguments = arguments.replace(" ","|")+("|LOCAL" if args.localcp else "")
