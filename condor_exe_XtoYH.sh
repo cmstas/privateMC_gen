@@ -126,8 +126,9 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32( -1 ) )
 
 else
 
+# The replacement below makes local files accessible from condor
 echo "process.source = cms.Source(\"PoolSource\",
-fileNames=cms.untracked.vstring(\"${INPUTFILENAMES}\".replace('/ceph', 'file:/ceph').split(\",\"))
+fileNames=cms.untracked.vstring(\"${INPUTFILENAMES}\".replace('/ceph/cms/store', 'davs://redirector.t2.ucsd.edu:1095/store').split(\",\"))
 )
 
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32( -1 ) )
