@@ -362,8 +362,8 @@ dsdefs_bkg = [
   ("/VHToGG_M125_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM", None, 1, "2018_MC"),
 
 # HHbbgg
-  ("GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2016APV", "/ceph/cms/store/user/fsetti/miniAOD_runII_20UL/GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2016_APV_STEP6_v0", 1, "2016APV_MC"),
-  ("GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2016", "/ceph/cms/store/user/fsetti/miniAOD_runII_20UL/GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2016_STEP6_v0", 1, "2016_MC"),
-  ("GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2017", "/ceph/cms/store/user/fsetti/miniAOD_runII_20UL/GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2017_STEP6_fixBug17", 1, "2017_MC"),
-  ("GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2018", "/ceph/cms/store/user/fsetti/miniAOD_runII_20UL/GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2018_STEP6_v0", 1, "2018_MC"),
+  ("GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_privateUL16APV_MINIAODSIM", "/ceph/cms/store/user/fsetti/miniAOD_runII_20UL/GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2016_APV_STEP6_v0", 1, "2016APV_MC"),
+  ("GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_privateUL16_MINIAODSIM", "/ceph/cms/store/user/fsetti/miniAOD_runII_20UL/GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2016_STEP6_v0", 1, "2016_MC"),
+  ("GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_privateUL17_MINIAODSIM", "/ceph/cms/store/user/fsetti/miniAOD_runII_20UL/GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2017_STEP6_fixBug17", 1, "2017_MC"),
+  ("GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_privateUL18_MINIAODSIM", "/ceph/cms/store/user/fsetti/miniAOD_runII_20UL/GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2018_STEP6_v0", 1, "2018_MC"),
 ]
