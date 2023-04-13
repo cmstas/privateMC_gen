@@ -1,14 +1,14 @@
 dsdefs_data = [
 # 2016
-  ("/DoubleEG/Run2016B-ver1_HIPM_UL2016_MiniAODv2-v1/MINIAOD", None , 10, "2016APV_Data"),
-  ("/DoubleEG/Run2016B-ver2_HIPM_UL2016_MiniAODv2-v3/MINIAOD", None , 10, "2016APV_Data"),
-  ("/DoubleEG/Run2016C-HIPM_UL2016_MiniAODv2-v1/MINIAOD", None, 10, "2016APV_Data"),
-  ("/DoubleEG/Run2016D-HIPM_UL2016_MiniAODv2-v1/MINIAOD", None, 10, "2016APV_Data"),
-  ("/DoubleEG/Run2016E-HIPM_UL2016_MiniAODv2-v1/MINIAOD", None, 10, "2016APV_Data"),
-  ("/DoubleEG/Run2016F-HIPM_UL2016_MiniAODv2-v1/MINIAOD", None, 10, "2016APV_Data"),
-  ("/DoubleEG/Run2016F-UL2016_MiniAODv2-v1/MINIAOD", None, 10, "2016_Data"),
-  ("/DoubleEG/Run2016G-UL2016_MiniAODv2-v1/MINIAOD", None, 10, "2016_Data"),
-  ("/DoubleEG/Run2016H-UL2016_MiniAODv2-v1/MINIAOD", None, 10, "2016_Data"),
+  ("/DoubleEG/Run2016B-ver1_HIPM_UL2016_MiniAODv2-v1/MINIAOD", None , 1, "2016APV_Data"),
+  ("/DoubleEG/Run2016B-ver2_HIPM_UL2016_MiniAODv2-v3/MINIAOD", None , 1, "2016APV_Data"),
+  ("/DoubleEG/Run2016C-HIPM_UL2016_MiniAODv2-v1/MINIAOD", None, 1, "2016APV_Data"),
+  ("/DoubleEG/Run2016D-HIPM_UL2016_MiniAODv2-v1/MINIAOD", None, 1, "2016APV_Data"),
+  ("/DoubleEG/Run2016E-HIPM_UL2016_MiniAODv2-v1/MINIAOD", None, 1, "2016APV_Data"),
+  ("/DoubleEG/Run2016F-HIPM_UL2016_MiniAODv2-v1/MINIAOD", None, 1, "2016APV_Data"),
+  ("/DoubleEG/Run2016F-UL2016_MiniAODv2-v1/MINIAOD", None, 1, "2016_Data"),
+  ("/DoubleEG/Run2016G-UL2016_MiniAODv2-v1/MINIAOD", None, 1, "2016_Data"),
+  ("/DoubleEG/Run2016H-UL2016_MiniAODv2-v1/MINIAOD", None, 1, "2016_Data"),
 # 2017
   ("/DoubleEG/Run2017B-UL2017_MiniAODv2-v1/MINIAOD", None, 10, "2017_Data"),
   ("/DoubleEG/Run2017C-UL2017_MiniAODv2-v2/MINIAOD", None, 10, "2017_Data"),
@@ -1079,25 +1079,20 @@ dsdefs_bkg = [
   ("GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_privateUL18_MINIAODSIM", "/ceph/cms/store/user/fsetti/miniAOD_runII_20UL/GluGluToHHTo2B2G_node_cHHH1_TuneCP5_13TeV-powheg-pythia8_2018_STEP6_v0", 1, "2018_MC"),
 
 # WW
-  ("/WW_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/MINIAODSIM", None, 1, "2016_APV_MC"),
+  ("/WW_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/MINIAODSIM", None, 1, "2016APV_MC"),
   ("/WW_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1/MINIAODSIM", None, 1, "2016_MC"),
   ("/WW_TuneCP5_13TeV-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM", None, 1, "2017_MC"),
   ("/WW_TuneCP5_13TeV-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v1/MINIAODSIM", None, 1, "2018_MC"),
 
 # WZ
-  ("/WZ_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/MINIAODSIM", None, 1, "2016_APV_MC"),
+  ("/WZ_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/MINIAODSIM", None, 1, "2016APV_MC"),
   ("/WZ_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1/MINIAODSIM", None, 1, "2016_MC"),
   ("/WZ_TuneCP5_13TeV-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM", None, 1, "2017_MC"),
   ("/WZ_TuneCP5_13TeV-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v1/MINIAODSIM", None, 1, "2018_MC"),
 
 # ZZ
-  ("/ZZ_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/MINIAODSIM", None, 1, "2016_APV_MC"),
+  ("/ZZ_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/MINIAODSIM", None, 1, "2016APV_MC"),
   ("/ZZ_TuneCP5_13TeV-pythia8/RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1/MINIAODSIM", None, 1, "2016_MC"),
   ("/ZZ_TuneCP5_13TeV-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM", None, 1, "2017_MC"),
   ("/ZZ_TuneCP5_13TeV-pythia8/RunIISummer19UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v1/MINIAODSIM", None, 1, "2018_MC")
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 74525972644454ac3f0b882802864b151fd631b6
 ]
